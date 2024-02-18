@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .user-info {
+            margin-bottom: 15px;
+        }
+        .user-info label {
+            font-weight: bold;
+            display: block;
+        }
+        .user-info p {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>User Profile</h2>
+    <div class="user-info">
+        <label>Username:</label>
+        <p th:text="${user.username}"></p>
+    </div>
+    <div class="user-info">
+        <label>Last Name:</label>
+        <p th:text="${user.lastName}"></p>
+    </div>
+    <div class="user-info">
+        <label>Email:</label>
+        <p th:text="${user.email}"></p>
+    </div>
+    <div class="user-info">
+        <label>Date of Birth:</label>
+        <p th:text="${user.dateOfBirth}"></p>
+    </div>
+    <div class="user-info">
+        <label>Age:</label>
+        <p th:text="${user.age}"></p>
+    </div>
+</div>
+</body>
+</html>
